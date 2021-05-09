@@ -31,6 +31,10 @@ export const Header = styled.header`
     margin-bottom: 20px;
     padding-left: 18px;
   }
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+  }
 `;
 export const LegendContainer = styled.ul`
   list-style: none;

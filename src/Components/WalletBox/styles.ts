@@ -17,23 +17,57 @@ export const Container = styled.div<IContainerProps>`
   position: relative;
   overflow: hidden;
 
-  >img{
+  > img {
     height: 110%;
-    opacity: .3;
+    opacity: 0.3;
     position: absolute;
     top: -10px;
     right: -30px;
   }
 
-  >span{
+  > span {
     font-size: 18px;
     font-weight: 500;
-
   }
 
-  >small{
+  > small {
     font-size: 12px;
     position: absolute;
     bottom: 10px;
+  }
+
+  @media (max-width: 770px) {
+    > span {
+      font-size: 14px;
+    }
+
+    > h1 {
+      word-wrap: break-word;
+      font-size: 22px;
+      > strong {
+        display: inline-block;
+        width: 100%;
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    width: 100%;
+
+    > h1 {
+      display: flex;
+      font-size: 24px;
+      strong {
+        position: initial;
+        width: auto;
+        font-size: 22px;
+      }
+
+      strong::after {
+        display: inline-block;
+        content: '';
+      }
+    }
   }
 `;

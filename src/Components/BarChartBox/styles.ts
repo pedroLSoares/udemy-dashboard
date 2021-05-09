@@ -1,46 +1,41 @@
 import styled from 'styled-components';
-interface ILegendProps {
-  color: string;
-}
 
 export const Container = styled.div`
   width: 48%;
   height: 260px;
-
   margin: 10px 0;
 
   background-color: ${(props) => props.theme.colors.tertiary};
   color: ${(props) => props.theme.colors.white};
-
   border-radius: 7px;
+
   display: flex;
 
-  @media (max-width: 770px) {
+  @media (max-width: 1200px) {
     display: flex;
+    flex-direction: column;
+
     width: 100%;
+    height: auto;
   }
 `;
 
 export const SideLeft = styled.aside`
+  flex: 1;
   padding: 30px 20px;
 
   > h2 {
-    margin-bottom: 20px;
+    padding-left: 16px;
+    margin-bottom: 10px;
   }
+`;
+export const SideRight = styled.main`
+  flex: 1;
+  min-height: 150px;
 
-  @media (max-width: 1345px) {
-    padding: 0 15px 5px;
-    margin-bottom: 7px;
-    > h2 {
-      margin-top: 15px;
-      margin-bottom: 7px;
-    }
-  }
-
-  @media (max-width: 420px) {
-    padding: 15px;
-    margin-bottom: 7px;
-  }
+  display: flex;
+  justify-content: center;
+  padding-top: 35px;
 `;
 
 export const LegendContainer = styled.ul`
@@ -61,17 +56,17 @@ export const LegendContainer = styled.ul`
   ::-webkit-scrollbar-track {
     background-color: ${(props) => props.theme.colors.tertiary};
   }
-
-  @media (max-width: 1345px) {
+  @media (max-width: 1200px) {
     display: flex;
-    flex-direction: column;
+    height: auto;
   }
 `;
 
-export const Legend = styled.li<ILegendProps>`
+export const Legend = styled.li`
   display: flex;
   align-items: center;
   margin-bottom: 7px;
+  padding-left: 16px;
 
   > div {
     background-color: ${(props) => props.color};
@@ -89,26 +84,13 @@ export const Legend = styled.li<ILegendProps>`
     margin-left: 5px;
   }
 
-  @media (max-width: 1345px) {
-    font-size: 14px;
-    margin: 3px 0;
+  @media (max-width: 1200px) {
     > div {
-      width: 35px;
-      height: 35px;
-      line-height: 35px;
-    }
-    > span {
-      margin-left: 7px;
-    }
-  }
-`;
+      width: 30px;
+      height: 30px;
 
-export const SideRight = styled.main`
-  display: flex;
-  flex: 1;
-  justify-content: center;
-
-  @media (max-width: 1345px) {
-    height: 100%;
+      font-size: 10px;
+      line-height: 30px;
+    }
   }
 `;
