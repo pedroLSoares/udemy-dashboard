@@ -322,6 +322,7 @@ const Dashboard: React.FC = () => {
           footerLabel='Atualizado com base nas entradas e saídas'
           icon='dollar'
           color='#4E41F0'
+          animationTime={.5}
         />
         <WalletBox
           title='Entradas'
@@ -329,6 +330,7 @@ const Dashboard: React.FC = () => {
           footerLabel='Atualizado com base nas entradas e saídas'
           icon='arrowUp'
           color='#F7931B'
+          animationTime={.7}
         />
         <WalletBox
           title='Saídas'
@@ -336,6 +338,7 @@ const Dashboard: React.FC = () => {
           footerLabel='Atualizado com base nas entradas e saídas'
           icon='arrowDown'
           color='#E44C4E'
+          animationTime={.9}
         />
 
         <MessageBox

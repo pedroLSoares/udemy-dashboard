@@ -11,6 +11,7 @@ interface IWalletBoxProps {
   footerLabel: string;
   icon: 'dollar' | 'arrowUp' | 'arrowDown';
   color: string;
+  animationTime?: any;
 }
 
 //FC = Functional component
@@ -20,6 +21,7 @@ const WalletBox: React.FC<IWalletBoxProps> = ({
   footerLabel,
   icon,
   color,
+  animationTime = 0.5,
 }) => {
   const iconSelected = useMemo(() => {
     switch (icon) {
@@ -30,12 +32,12 @@ const WalletBox: React.FC<IWalletBoxProps> = ({
       case 'arrowDown':
         return arrowDownImg;
       default:
-        return undefined;
+        return '';
     }
   }, [icon]);
 
   return (
-    <Container color={color}>
+    <Container color={color} animationTime={animationTime}>
       <span>{title}</span>
       <h1>
         <strong>R$ </strong>
